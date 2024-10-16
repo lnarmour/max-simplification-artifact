@@ -1,0 +1,9 @@
+// Simple prefix sum (Section 2.1)
+affine prefix_sum [N]->{:0<N}
+inputs
+  X : {[i] : 0<=i<=N}
+outputs
+  Y : {[i] : 0<=i<=N}
+let
+  Y[i] = reduce(+, [j], {: 0<=j<=i} : X[j]);
+.

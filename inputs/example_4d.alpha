@@ -1,0 +1,9 @@
+// A reduction with a 4-dimensional body, 2-dimensional accumulation and 2-dimensional reuse
+affine example_4d [N]->{ : 10<N }
+inputs 
+  X : {[i,j] : 0<=i<=j<2N}
+outputs
+  Y : {[i,j] : 0<=i<=j<N}
+let
+  Y[i,j] = reduce(max, [k,l], {: i<=k<=2i and i+j<=l<=2j} : X[k,l]);
+.

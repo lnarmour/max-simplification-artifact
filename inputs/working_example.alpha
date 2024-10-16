@@ -1,0 +1,9 @@
+// The 3D working example (Section 3.3)
+affine working_example [N]->{ : 0<N }
+inputs 
+  X : {[k] : 0<=k<=N}
+outputs
+  Y : {[i] : 0<=i<=N}
+let
+  Y[i] = reduce(+, [j,k], {: i<=N and 0<=j and 0<=k and k<=i-j} : X[k]);
+.

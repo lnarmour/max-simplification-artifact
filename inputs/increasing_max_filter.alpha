@@ -1,0 +1,9 @@
+// Sliding and increasing max filter (Section 2.3)
+affine increasing_max_filter [N]->{:0<N}
+inputs
+  X : {[i] : 0<=i<=2N}
+outputs
+  Y : {[i] : 0<=i<=N}
+let
+  Y[i] = reduce(max, [j], {: i<=j<=2i} : X[j]);
+.

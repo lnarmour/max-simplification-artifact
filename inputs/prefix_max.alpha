@@ -1,0 +1,9 @@
+// Simple prefix max (Section 2.2)
+affine prefix_max [N]->{:0<N}
+inputs
+  X : {[i] : 0<=i<=N}
+outputs
+  Y : {[i] : 0<=i<=N}
+let
+  Y[i] = reduce(max, [j], {: 0<=j<=i} : X[j]);
+.

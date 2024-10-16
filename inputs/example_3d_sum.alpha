@@ -1,0 +1,9 @@
+// A 3D reduction
+affine example_3d_sum [N]->{ : 0<N }
+inputs 
+  X : {[k] : 0<=k<=N}
+outputs
+  Y : {[i,j] : j>=N-i and j>=2i-2N and 2j<=2N+i}
+let
+  Y[i,j] = reduce(+, [k], {: 0<=k<=2N-2i+j and k<=2N+i-2j and k<=i+j-N} : X[k]);
+.

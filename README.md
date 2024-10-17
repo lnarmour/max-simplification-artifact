@@ -1,6 +1,6 @@
 # max-simplification-artifact
 
-This repository contains code samples that complement the POPL 2025 conference paper titled, "Maximal Simplification of Polyhedral Reductions". The paper proposes extensions to the simplifying reductions algorithm, which automaticall obtains asmpytotic complexity improvments on the input program. The included (A)lpha to (C) (C)ompiler, `acc`, script contains a partial proof-of-concept implementation of the splitting methods proposed in the paper. 
+This repository contains code samples that complement the POPL 2025 conference paper titled, "Maximal Simplification of Polyhedral Reductions". The paper proposes extensions to the simplifying reductions algorithm, which automatically obtains asmpytotic complexity improvments on the input program. The included (A)lpha to (C) (C)ompiler, `acc`, script contains a partial proof-of-concept implementation of the splitting methods proposed in the paper. 
 
 ## References
 
@@ -477,7 +477,7 @@ affine working_example [N] -> {  : N > 0 }
 
 
 # The simplified program now involves a residual 2D reduction "on" the {3}-face. The
-# expression inside the reduction body is still X[k], but the surround context has the
+# expression inside the reduction body is still X[k], but the surrounding context has the
 # constraint that k=i-j. This corresponds precisely to the fact that the computation
 # "moved" to the {3}-face which is characterized by saturing i - j - k >= 0.
 # 

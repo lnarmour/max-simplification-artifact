@@ -118,10 +118,6 @@ For example, use the following command to simplify the prefix sum example and ge
 ```
 ./acc -s --target-complexity 1 --num-simplifications 0 inputs/prefix_sum.alpha
 ```
-This creates a subdirectory called `prefix_sum` which can be compiled with the following command:
-```
-make -C prefix_sum
-```
 This produces the following files:
 ```
 prefix_sum/
@@ -144,7 +140,6 @@ The simplifications subdirectory contains each of the discovered simplifications
 
 The baseline implementation can be compiled simply by running make. For example, the following commands make and run the baseline implementation for a problem size of N=100000.
 ```
-$ cp prefix_sum/simplifications/v0/prefix_sum.c prefix_sum/
 $ make -C prefix_sum
 $ ./prefix_sum/prefix_sum 100000
 Execution time : 4.751179 sec.
@@ -155,7 +150,7 @@ Execution time : 4.751179 sec.
 
 The simplified versions can be compiled by copying the corresponding `*.c` file to the top level directory and running make. For example, use the following to compile and run the first simplified version for the problem size of N=100000.
 ```
-$ cp generated/prefix_sum/simplifications/v0/prefix_sum.c generated/prefix_sum/
+$ cp prefix_sum/simplifications/v0/prefix_sum.c prefix_sum/
 $ make -C prefix_sum
 $ ./prefix_sum/prefix_sum 100000
 Execution time : 0.004037 sec.

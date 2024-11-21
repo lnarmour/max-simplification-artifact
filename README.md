@@ -1,6 +1,6 @@
 # max-simplification-artifact
 
-This repository contains code samples that complement the POPL 2025 conference paper titled, "Maximal Simplification of Polyhedral Reductions". The paper proposes extensions to the simplifying reductions algorithm, which automatically obtains asmpytotic complexity improvments on the input program. The included (A)lpha to (C) (C)ompiler, `acc`, script contains a partial proof-of-concept implementation of the splitting methods proposed in the paper. 
+This repository contains code samples that complement the POPL 2025 conference paper titled, "Maximal Simplification of Polyhedral Reductions". The paper proposes extensions to the simplifying reductions algorithm, which automatically obtains asymptotic complexity improvements on the input program. The included (A)lpha to (C) (C)ompiler, `acc`, script contains a partial proof-of-concept implementation of the splitting methods proposed in the paper. 
 
 ## References
 
@@ -344,8 +344,8 @@ Faces:
 # The single-step simplification (Section 3.4) involves selecting a reuse vector (rho)
 # in R and applying Theorem 5 from GR06.
 # 
-# There are infintiely many such vectors in R. However, we only need to enumerate 
-# the onesthat result in unique combinations of residual computations on the four
+# There are infinitely many such vectors in R. However, we only need to enumerate 
+# the ones that result in unique combinations of residual computations on the four
 # 2-faces.
 # 
 # There are three types of residual computations, per Section 3.5:
@@ -451,7 +451,7 @@ Faces:
 # 
 #   dot([1,0,0], [-1,0,0]) = 1*-1 + 0*0 + 0*0 = -1 < 0
 # 
-# Appliying the single-step simplication of GR06 with the reuse vector [1, 0, 0] gives
+# Applying the single-step simplication of GR06 with the reuse vector [1, 0, 0] gives
 # the following simplified program:
 #
 affine working_example [N] -> {  : N > 0 }
